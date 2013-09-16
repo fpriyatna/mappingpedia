@@ -1,0 +1,17 @@
+@prefix test: <http://www.w3.org/2006/03/test-description#> .
+@prefix dcterms: <http://purl.org/dc/elements/1.1/> .
+@prefix rdb2rdftest: <http://purl.org/NET/rdb2rdf-test#> .
+@prefix mappingpedia: <http://mappingpedia.linkeddata.es/vocabulary#> .
+@prefix normv: <http://normv.linkeddata.es/vocabulary#> .
+@base <http://www.w3.org/2001/sw/rdb2rdf/test-cases/#> .
+
+
+<PR-NOR-TSTX-02-EX> a rdb2rdftest:R2RML ;	
+	dcterms:title "Example of R2RML mappings corresponding to Relation-based Thesaurus pattern" ; 
+	dcterms:identifier "PR-NOR-TSTX-02-EX" ;
+	mappingpedia:purpose "To give an example of R2RML mapping corresponding to Relation-based Thesaurus pattern" ;
+	rdb2rdftest:database "sql-example.sql" ;
+	rdb2rdftest:output "result-example.nt" ;
+	rdb2rdftest:mappingDocument "mapping-example.ttl" ;
+	mappingpedia:hasSchemaPattern normv:RelationBased;
+.

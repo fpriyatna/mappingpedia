@@ -1,0 +1,70 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ex: <http://example.com/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://mappingpedia.linkeddata.es/rdb2rdf/r2rml/tc/> .
+
+#EducationLevel--EducationSchool--EducationSpecialization
+<TriplesMapEducationLevel>
+	a rr:TriplesMap;
+    
+	rr:logicalTable [ rr:tableName "istat"];
+    
+	rr:subjectMap [
+		rr:template "http://example.org/resource/EducationLevel{levelId}";
+		rr:termType rr:IRI;
+		rr:class rdfs:Class;
+	];
+    
+	rr:predicateObjectMap [
+		rr:predicate rdfs:label;
+		rr:objectMap [rr:column "levelDesc"];
+	];
+.
+	
+<TriplesMapEducationSchool>
+	a rr:TriplesMap;
+    
+	rr:logicalTable [ rr:sqlQuery """SELECT DISTINCT(levelId || schoolId), levelId, schoolId, schoolDesc FROM istat"""];
+    
+	rr:subjectMap [
+		rr:template "http://example.org/resource/EducationSchool{schoolId}";
+		rr:termType rr:IRI;
+		rr:class rdfs:Class;
+	];
+    
+	rr:predicateObjectMap [
+		rr:predicate rdfs:label;
+		rr:objectMap [rr:column "schoolDesc"];
+	];
+    
+	rr:predicateObjectMap [
+		rr:predicate rdfs:subClassOf;
+		rr:objectMap [rr:template "http://example.org/resource/EducationLevel{levelId}"];
+	];
+
+.
+
+<TriplesMapEducationSpecialization>
+	a rr:TriplesMap;
+    
+	rr:logicalTable [ rr:sqlQuery """SELECT DISTINCT(levelId || schoolId || specializationId), specializationId, specializationDesc, schoolId FROM istat"""];
+    
+	rr:subjectMap [
+		rr:template "http://example.org/resource/EducationSpecialization{specializationId}";
+		rr:termType rr:IRI;
+		rr:class rdfs:Class;
+	];
+    
+	rr:predicateObjectMap [
+		rr:predicate rdfs:label;
+		rr:objectMap [rr:column "specializationDesc"];
+	];
+    
+	rr:predicateObjectMap [
+		rr:predicate rdfs:subClassOf;
+		rr:objectMap [rr:template "http://example.org/resource/EducationSchool{schoolId}"];
+	];
+
+.

@@ -1,0 +1,11 @@
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rr:      <http://www.w3.org/ns/r2rml#> .
+
+<TriplesMapStudent> a rr:TriplesMap;
+  rr:logicalTable [ rr:sqlQuery """
+    SELECT s.sid AS sid, a.aid AS aid, (CASE a.article_type 
+        WHEN 'ppr' THEN 'Paper' WHEN 'ths' THEN 'Thesis') AS ArticleType
+    FROM student s, article a WHERE s.sid=a.author """ ];
+  rr:subjectMap [ rr:template "http://example.com/resource/Student/{sid}"; ];
+  rr:predicateObjectMap [ rr:predicate ex:isAuthorOf;
+    rr:objectMap [ rr:template "http://example.com/resource/{ArticleType}/{aid}";];].

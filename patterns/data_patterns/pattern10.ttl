@@ -1,0 +1,13 @@
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rr:      <http://www.w3.org/ns/r2rml#> .
+
+<TriplesMapStudent> a rr:TriplesMap;
+  rr:logicalTable [ rr:tableName  "student" ];
+  rr:subjectMap [ rr:template "http://example.org/resource/Student/{sid}"; ];
+  rr:predicateObjectMap [ rr:predicate ex:countryOfBirth; 
+    rr:objectMap [ rr:parentTriplesMap <TriplesMapCountry>;
+      rr:joinCondition [ rr:child "country_of_birth" ;rr:parent "cid" ; ];];].
+
+<TriplesMapCountry> a rr:TriplesMap;
+  rr:logicalTable [ rr:tableName  "country" ];
+  rr:subjectMap [ rr:template "http://example.org/resource/Country/{cid}"; ].

@@ -1,0 +1,26 @@
+PREFIX dbpedia: <http://dbpedia.org/ontology/> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX dbprop: <http://dbpedia.org/property/> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX geoes: <http://geo.linkeddata.es/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX ex: <http://example.com/> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#>  
+SELECT ?name WHERE {
+
+  SERVICE <http://es.dbpedia.org/sparql> {
+         ?countryes <http://es.dbpedia.org/property/capital> <http://es.dbpedia.org/resource/Madrid> . 
+  }
+
+  SERVICE <http://mappingpedia.linkeddata.es/mappings/fusiontables/1TOOi8NIvlj_uIVgsoKH6maxYymHXRfyWT-n3W_I/countrynames.ttl> {
+	?country <http://example.com/hasEnglishResource> ?countryen .
+	?country <http://example.com/hasSpanishResource> ?countryes .
+  }
+
+  SERVICE <http://mappingpedia.linkeddata.es/mappings/fusiontables/1pQBGUqR_g-j1WQavu-Fi1wGS7jsdRxomGc0DxMI/oegmembers.ttl> {
+	  ?member rdf:type foaf:Person .
+          ?member foaf:name ?name .
+          ?member ex:hasCountry ?countryen .  
+} 
+		  
+} 

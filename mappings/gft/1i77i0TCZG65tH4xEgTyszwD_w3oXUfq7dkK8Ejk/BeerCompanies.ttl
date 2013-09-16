@@ -1,0 +1,33 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ex: <http://example.com/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix rev: <http://purl.org/stuff/rev#> .
+@prefix bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/> .
+@prefix bsbm-inst: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/> .
+@prefix mo: <http://purl.org/ontology/mo/> .
+@base <http://mappingpedia.org/rdb2rdf/r2rml/tc/> .
+
+<TriplesMapBeerCompanies>
+    a rr:TriplesMap;
+        
+    rr:logicalTable [ rr:tableName  "1i77i0TCZG65tH4xEgTyszwD_w3oXUfq7dkK8Ejk" ];
+	
+    rr:subjectMap [
+        a rr:Subject;
+        rr:template "http://dbpedia.org/resource/{Beer}";
+        rr:termType rr:IRI;
+        rr:class <http://dbpedia.org/ontology/Company>;
+    ];
+
+    rr:predicateObjectMap
+    [ 
+        rr:predicateMap [ rr:constant rdfs:label ]; 
+        rr:objectMap    [ 
+            rr:constant "Beer";
+            rr:termType rr:Literal;
+        ];
+    ];
+.	

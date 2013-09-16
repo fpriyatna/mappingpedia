@@ -1,0 +1,10 @@
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rr:      <http://www.w3.org/ns/r2rml#> .
+
+<TriplesMapStudent> a rr:TriplesMap;
+  rr:logicalTable [ rr:sqlQuery """
+    SELECT s.sid AS sid, c.country_code AS country_code FROM student s, country c
+    WHERE s.country_of_birth = c.country_id """];
+  rr:subjectMap [ rr:template "http://example.org/resource/Student/{sid}"; ];
+  rr:predicateObjectMap [ rr:predicate ex:countryOfBirth;
+    rr:objectMap [ rr:template "http://example.org/resource/Country/{cid}"; ]; ] .

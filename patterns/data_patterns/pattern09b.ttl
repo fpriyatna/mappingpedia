@@ -1,0 +1,9 @@
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rr:      <http://www.w3.org/ns/r2rml#> .
+
+<TriplesMapStudent1> a rr:TriplesMap;
+  rr:logicalTable [ 
+    rr:sqlQuery "SELECT sid, firstname || ' ' || lastname AS fullname FROM student" ];
+  rr:subjectMap [ rr:template "http://example.com/resource/Student/{sid}" ];
+  rr:predicateObjectMap [ 
+    rr:predicate foaf:name; rr:objectMap [rr:column "fullname"]; ].

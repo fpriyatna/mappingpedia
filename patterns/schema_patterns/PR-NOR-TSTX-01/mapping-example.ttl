@@ -1,0 +1,45 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ex: <http://example.com/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@base <http://mappingpedia.org/rdb2rdf/r2rml/tc/> .
+
+<TriplesMapETT>
+	a rr:TriplesMap;
+    
+	rr:logicalTable [ rr:tableName "ett"];
+    
+	rr:subjectMap [
+		rr:template "http://example.org/resource/Term/{Term}";
+		rr:termType rr:IRI;
+		rr:class rdfs:Class;
+	];
+    
+	rr:predicateObjectMap [
+		rr:predicate rdfs:label;
+		rr:objectMap [rr:column "Term"];
+	];
+
+	rr:predicateObjectMap [
+		rr:predicate skos:broader;
+		rr:objectMap [rr:template "http://example.org/resource/Term/{BT}"];
+	];
+
+	rr:predicateObjectMap [
+		rr:predicate skos:narrower;
+		rr:objectMap [rr:template "http://example.org/resource/Term/{NT}"];
+	];
+
+	rr:predicateObjectMap [
+		rr:predicate skos:related;
+		rr:objectMap [rr:template "http://example.org/resource/Term/{RT}"];
+	];
+
+	rr:predicateObjectMap [
+		rr:predicate skos:altLabel;
+		rr:objectMap [rr:template "http://example.org/resource/Term/{UF}"];
+	];
+    
+.

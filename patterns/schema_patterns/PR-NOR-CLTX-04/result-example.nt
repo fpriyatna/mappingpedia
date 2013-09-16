@@ -1,0 +1,32 @@
+<http://example.org/resource/EducationSpecialization010> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://example.org/resource/EducationSpecialization010> <http://www.w3.org/2000/01/rdf-schema#label> "Esperto frutticoltore" .
+<http://example.org/resource/EducationSpecialization010> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/resource/EducationSchool101> .
+<http://example.org/resource/EducationSpecialization011> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://example.org/resource/EducationSpecialization011> <http://www.w3.org/2000/01/rdf-schema#label> "Esperto olivicoltore" .
+<http://example.org/resource/EducationSpecialization011> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/resource/EducationSchool101> .
+<http://example.org/resource/EducationSpecialization001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://example.org/resource/EducationSpecialization001> <http://www.w3.org/2000/01/rdf-schema#label> "Analista Contabile" .
+<http://example.org/resource/EducationSpecialization001> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/resource/EducationSchool104> .
+<http://example.org/resource/EducationSpecialization002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://example.org/resource/EducationSpecialization002> <http://www.w3.org/2000/01/rdf-schema#label> "Operatore Commerciale" .
+<http://example.org/resource/EducationSpecialization002> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/resource/EducationSchool104> .
+<http://example.org/resource/EducationLevel30> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://example.org/resource/EducationLevel30> <http://www.w3.org/2000/01/rdf-schema#label> "Higher Secondary Education" .
+<http://example.org/resource/EducationLevel30> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://example.org/resource/EducationLevel30> <http://www.w3.org/2000/01/rdf-schema#label> "Higher Secondary Education" .
+<http://example.org/resource/EducationLevel40> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://example.org/resource/EducationLevel40> <http://www.w3.org/2000/01/rdf-schema#label> "Higher Secondary Education - Allows Access to Universities" .
+<http://example.org/resource/EducationLevel40> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://example.org/resource/EducationLevel40> <http://www.w3.org/2000/01/rdf-schema#label> "Higher Secondary Education - Allows Access to Universities" .
+<http://example.org/resource/EducationSchool101> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://example.org/resource/EducationSchool101> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/resource/EducationLevel30> .
+<http://example.org/resource/EducationSchool101> <http://www.w3.org/2000/01/rdf-schema#label> "Instituto professionale agrario" .
+<http://example.org/resource/EducationSchool101> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://example.org/resource/EducationSchool101> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/resource/EducationLevel30> .
+<http://example.org/resource/EducationSchool101> <http://www.w3.org/2000/01/rdf-schema#label> "Instituto professionale agrario" .
+<http://example.org/resource/EducationSchool104> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://example.org/resource/EducationSchool104> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/resource/EducationLevel40> .
+<http://example.org/resource/EducationSchool104> <http://www.w3.org/2000/01/rdf-schema#label> "Istit. Profess. Servizi Commerciali" .
+<http://example.org/resource/EducationSchool104> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://example.org/resource/EducationSchool104> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/resource/EducationLevel40> .
+<http://example.org/resource/EducationSchool104> <http://www.w3.org/2000/01/rdf-schema#label> "Istit. Profess. Servizi Commerciali" .

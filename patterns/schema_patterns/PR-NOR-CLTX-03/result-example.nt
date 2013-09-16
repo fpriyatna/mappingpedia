@@ -1,0 +1,25 @@
+<http://example.org/resource/Professione> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://example.org/resource/Professione01.05> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://example.org/resource/Professione01.05> <http://www.w3.org/2000/01/rdf-schema#label> "Specialist e tecnici delle scienze informatiche" .
+<http://example.org/resource/Professione01.05> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/resource/Professione01> .
+<http://example.org/resource/Professione02.05> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://example.org/resource/Professione02.05> <http://www.w3.org/2000/01/rdf-schema#label> "Specialist e tecnici delle gestione dimpresa" .
+<http://example.org/resource/Professione02.05> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/resource/Professione02> .
+<http://example.org/resource/Professione01> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://example.org/resource/Professione01> <http://www.w3.org/2000/01/rdf-schema#label> "Professioni specialistiche e tecniche" .
+<http://example.org/resource/Professione01> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/resource/Professione> .
+<http://example.org/resource/Professione02> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://example.org/resource/Professione02> <http://www.w3.org/2000/01/rdf-schema#label> "Professioni operative della gestione dimpresa" .
+<http://example.org/resource/Professione02> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/resource/Professione> .
+<http://example.org/resource/Professione01.05.01> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://example.org/resource/Professione01.05.01> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/resource/Professione01.05> .
+<http://example.org/resource/Professione01.05.01> <http://www.w3.org/2000/01/rdf-schema#label> "Specialist delle scienze informatiche" .
+<http://example.org/resource/Professione01.05.02> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://example.org/resource/Professione01.05.02> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/resource/Professione01.05> .
+<http://example.org/resource/Professione01.05.02> <http://www.w3.org/2000/01/rdf-schema#label> "Tecnici delle scienze informatiche" .
+<http://example.org/resource/Professione02.05.01> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://example.org/resource/Professione02.05.01> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/resource/Professione02.05> .
+<http://example.org/resource/Professione02.05.01> <http://www.w3.org/2000/01/rdf-schema#label> "Specialist delle gestione dimpresa" .
+<http://example.org/resource/Professione02.05.02> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://example.org/resource/Professione02.05.02> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/resource/Professione02.05> .
+<http://example.org/resource/Professione02.05.02> <http://www.w3.org/2000/01/rdf-schema#label> "Tecnici delle gestione dimpresa" .

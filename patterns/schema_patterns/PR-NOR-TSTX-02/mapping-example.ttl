@@ -1,0 +1,40 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ex: <http://example.com/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@base <http://mappingpedia.linkeddata.es/rdb2rdf/r2rml/tc/> .
+
+<TriplesMapTerm> a rr:TriplesMap;
+	rr:logicalTable [ rr:sqlQuery """
+    SELECT t.TermCode, t.Term, tl.TermCode2, lt.LinkDesc , lt.LinkTypeID 
+        , CASE lt.LinkAbr 
+            WHEN 'BT' THEN 'skos:broader'
+            WHEN 'NT' THEN 'skos:narrower' 
+            WHEN 'RT' THEN 'skos:related'
+        END AS linkURIObject
+        , CASE lt.LinkAbr 
+            WHEN 'UF' THEN 'skos:altLabel' 
+        END AS linkURIData
+    FROM agrovocterm t
+    LEFT OUTER JOIN termlink tl ON t.TermCode = tl.TermCode1
+    LEFT OUTER JOIN linktype lt ON tl.LinkTypeID = lt.LinkTypeID
+    """];
+
+    rr:subjectMap [rr:class rdfs:Class;rr:termType rr:IRI;
+		rr:template "http://example.org/resource/Term{TermCode}";];
+
+    rr:predicateObjectMap [rr:predicate rdfs:label;
+        rr:objectMap [rr:column "Term"];];
+
+    rr:predicateObjectMap [rr:predicateMap [
+        rr:column "linkURIObject"; rr:termType rr:IRI];
+		rr:objectMap [
+            rr:template "http://example.org/resource/Term{TermCode2}"]; ];
+
+    rr:predicateObjectMap [rr:predicateMap [
+        rr:column "linkURIData"; rr:termType rr:Literal];
+		rr:objectMap [
+            rr:template "http://example.org/resource/Term{Term}"]; ];
+.

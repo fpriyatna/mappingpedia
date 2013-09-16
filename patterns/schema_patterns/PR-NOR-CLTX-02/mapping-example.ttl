@@ -1,0 +1,29 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ex: <http://example.com/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://mappingpedia.linkeddata.es/rdb2rdf/r2rml/tc/> .
+
+<TriplesMapCategory>
+	a rr:TriplesMap;
+	rr:logicalTable [ rr:tableName "waterareaclassification"];
+    
+	rr:subjectMap [
+		rr:template "http://example.org/resource/Category{ID}";
+		rr:termType rr:IRI;
+		rr:class rdfs:Class;
+	];
+    
+	rr:predicateObjectMap [
+		rr:predicate rdfs:subClassOf;
+		rr:objectMap [rr:template "http://example.org/resource/Category{ParentID}"; rr:termType rr:IRI;];
+	];
+
+	rr:predicateObjectMap [
+		rr:predicate rdfs:label;
+		rr:objectMap [rr:column "CSI_Name"];
+	];
+    
+.
+	

@@ -1,0 +1,33 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ex: <http://example.com/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix rev: <http://purl.org/stuff/rev#> .
+@prefix bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/> .
+@prefix bsbm-inst: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/> .
+@prefix mo: <http://purl.org/ontology/mo/> .
+@base <http://mappingpedia.org/rdb2rdf/r2rml/tc/> .
+
+<TriplesMapMusicPlaylist>
+    a rr:TriplesMap;
+        
+    rr:logicalTable [ rr:tableName  "1duB5beFTjZJqLS-DyenFEKz7pSB4eNaMSrTpK-k" ];
+	
+    rr:subjectMap [
+        a rr:Subject;
+        rr:template "http://dbpedia.org/resource/{Name}";
+        rr:termType rr:IRI;
+        rr:class mo:MusicalWork;
+    ];
+
+    rr:predicateObjectMap
+    [ 
+        rr:predicateMap [ rr:constant mo:performer ]; 
+        rr:objectMap    [ 
+            rr:template "http://es.dbpedia.org/resource/{Artist}";
+            rr:termType rr:IRI;
+        ];
+    ];
+.	

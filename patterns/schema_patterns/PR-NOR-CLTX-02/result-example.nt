@@ -1,0 +1,26 @@
+<http://example.org/resource/Category20000> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://example.org/resource/Category20000> <http://www.w3.org/2000/01/rdf-schema#label> "Water Area" .
+<http://example.org/resource/Category21000> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://example.org/resource/Category21000> <http://www.w3.org/2000/01/rdf-schema#label> "Environmental Area" .
+<http://example.org/resource/Category21000> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/resource/Category20000> .
+<http://example.org/resource/Category24020> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://example.org/resource/Category24020> <http://www.w3.org/2000/01/rdf-schema#label> "Jurisdiction Area" .
+<http://example.org/resource/Category24020> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/resource/Category20000> .
+<http://example.org/resource/Category22000> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://example.org/resource/Category22000> <http://www.w3.org/2000/01/rdf-schema#label> "Fishing Statistical Area" .
+<http://example.org/resource/Category22000> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/resource/Category20000> .
+<http://example.org/resource/Category21001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://example.org/resource/Category21001> <http://www.w3.org/2000/01/rdf-schema#label> "Inland/Marine" .
+<http://example.org/resource/Category21001> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/resource/Category21000> .
+<http://example.org/resource/Category21002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://example.org/resource/Category21002> <http://www.w3.org/2000/01/rdf-schema#label> "Ocean" .
+<http://example.org/resource/Category21002> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/resource/Category21000> .
+<http://example.org/resource/Category21003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://example.org/resource/Category21003> <http://www.w3.org/2000/01/rdf-schema#label> "North/South/Equatorial" .
+<http://example.org/resource/Category21003> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/resource/Category21000> .
+<http://example.org/resource/Category22001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://example.org/resource/Category22001> <http://www.w3.org/2000/01/rdf-schema#label> "FAO Statistical Area" .
+<http://example.org/resource/Category22001> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/resource/Category22000> .
+<http://example.org/resource/Category22002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://example.org/resource/Category22002> <http://www.w3.org/2000/01/rdf-schema#label> "Areal Grid System" .
+<http://example.org/resource/Category22002> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/resource/Category22000> .

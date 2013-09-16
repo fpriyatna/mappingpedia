@@ -1,0 +1,12 @@
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rr:      <http://www.w3.org/ns/r2rml#> .
+
+<TriplesMapStudent> a rr:TriplesMap;
+  rr:logicalTable [ rr:tableName  "student" ];
+  rr:subjectMap [ rr:class foaf:Person;
+    rr:template "http://example.com/resource/Student/{sid}" ] .
+
+<TriplesMapStudent> a rr:TriplesMap;
+  rr:logicalTable [ rr:tableName  "professor" ];
+  rr:subjectMap [ rr:class foaf:Person;
+    rr:template "http://example.com/resource/Professor/{sid}" ] .

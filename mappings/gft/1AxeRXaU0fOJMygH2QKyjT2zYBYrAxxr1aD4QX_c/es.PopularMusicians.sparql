@@ -1,0 +1,16 @@
+PREFIX dbpedia: <http://dbpedia.org/ontology/> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX dbprop: <http://dbpedia.org/property/> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX geoes: <http://geo.linkeddata.es/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX mo: <http://purl.org/ontology/mo/>
+PREFIX ex: <http://example.com/>        
+
+SELECT ?artist ?country WHERE {
+#    SERVICE <http://mappingpedia.linkeddata.es/mappings/fusiontables/1AxeRXaU0fOJMygH2QKyjT2zYBYrAxxr1aD4QX_c/MostPopularMusicians.ttl> {
+        ?artist a <http://dbpedia.org/ontology/Artist> .
+        ?artist ex:hasCountry ?country .
+#    }
+} 

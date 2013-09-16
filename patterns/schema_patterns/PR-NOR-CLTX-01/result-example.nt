@@ -1,0 +1,10 @@
+<http://example.org/resource/Occupation1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://example.org/resource/Occupation1> <http://www.w3.org/2000/01/rdf-schema#Label> "LEGISLATORS, SENIOR OFFICIALS AND MANAGERS" .
+<http://example.org/resource/Occupation11> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://example.org/resource/Occupation11> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/resource/Occupation1> .
+<http://example.org/resource/Occupation11> <http://www.w3.org/2000/01/rdf-schema#Label> "Legislators and senior officials" .
+<http://example.org/resource/Occupation12> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://example.org/resource/Occupation12> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/resource/Occupation1> .
+<http://example.org/resource/Occupation12> <http://www.w3.org/2000/01/rdf-schema#Label> "Corporate managers" .
+<http://example.org/resource/Occupation2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://example.org/resource/Occupation2> <http://www.w3.org/2000/01/rdf-schema#Label> "PROFESSIONALS" .

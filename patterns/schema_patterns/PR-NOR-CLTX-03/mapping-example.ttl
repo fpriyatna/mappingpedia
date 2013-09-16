@@ -1,0 +1,39 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ex: <http://example.com/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://mappingpedia.linkeddata.es/rdb2rdf/r2rml/tc/> .
+
+<TriplesMapProfessione0> a rr:TriplesMap;
+	rr:logicalTable [ rr:tableName "Professione0"];
+	rr:subjectMap [ rr:class rdfs:Class; rr:termType rr:IRI;
+		rr:template 
+            "http://example.org/resource/Professione{id0}"; ];
+	rr:predicateObjectMap [rr:predicate rdfs:label; rr:objectMap [rr:column "desc0"];];
+    rr:predicateObjectMap [ rr:predicate rdfs:subClassOf; 
+        rr:objectMap [rr:constant 
+            "http://example.org/resource/Professione"]; ];.
+	
+<TriplesMapProfessione1> a rr:TriplesMap;
+    rr:logicalTable [ rr:tableName "Professione1"];
+	rr:subjectMap [ rr:class rdfs:Class; rr:termType rr:IRI;
+		rr:template 
+            "http://example.org/resource/Professione{id1}"; ];
+	rr:predicateObjectMap [ rr:predicate rdfs:label; rr:objectMap [rr:column "desc1"]; ];
+	rr:predicateObjectMap [rr:predicate rdfs:subClassOf;
+        rr:objectMap [ rr:parentTriplesMap <TriplesMapProfessione0>;
+            rr:joinCondition [
+                rr:child "id0" ;rr:parent "id0" ;];
+            rr:termType rr:IRI; ]; ];.
+
+<TriplesMapProfessione2> a rr:TriplesMap;
+	rr:logicalTable [ rr:tableName "Professione2"];
+	rr:subjectMap [rr:class rdfs:Class; rr:termType rr:IRI;
+		rr:template "http://example.org/resource/Professione{id2}"; ];
+	rr:predicateObjectMap [ rr:predicate rdfs:label; rr:objectMap [rr:column "desc2"]; ];
+	rr:predicateObjectMap [rr:predicate rdfs:subClassOf;
+		rr:objectMap [ rr:parentTriplesMap <TriplesMapProfessione1>;
+            rr:joinCondition [
+                rr:child "id1" ; rr:parent "id1" ;];
+            rr:termType rr:IRI; ]; ];.
